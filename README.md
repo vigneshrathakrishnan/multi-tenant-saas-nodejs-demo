@@ -118,6 +118,19 @@ Includes:
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Login
+
+![Login](assets/login.png)
+
+### 📊 Dashboard
+
+![Dashboard1](assets/dashboard1.png)
+![Dashboard2](assets/dashboard2.png)
+
+---
+
 ## 👤 Author
 
 Vignesh Kumar Radhakrishnan
