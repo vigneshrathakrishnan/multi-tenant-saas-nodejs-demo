@@ -34,8 +34,18 @@ export default function App() {
     });
     const data = await res.json();
     setToken(data.token);
+    localStorage.setItem("token", data.token);
+
     setEmail(email); // store email for branding
+    localStorage.setItem("email", email);
+
     console.log("see here: " + email)
+  };
+
+  const logout = () => {
+    setToken("");
+    localStorage.removeItem("token")
+    localStorage.removeItem("email")
   };
 
   // Fetch data
@@ -59,6 +69,16 @@ export default function App() {
       getOrders();
     }
   }, [token]);
+
+  useEffect(() => {
+  const storedToken = localStorage.getItem("token");
+  const storedEmail = localStorage.getItem("email");
+
+  if (storedToken) {
+    setToken(storedToken);
+    setEmail(storedEmail);
+  }
+}, []);
 
   // Helper to extract store name from email
   const getStoreName = (email) => {
@@ -113,7 +133,7 @@ export default function App() {
         <>
           <div style={styles.header}>
             <h2 style={{ margin: 0 }}>Dashboard ({getStoreName(email)} Store)</h2>
-            <button onClick={() => setToken("")} style={styles.logout}>
+            <button onClick={logout} style={styles.logout}>
               Logout
             </button>
           </div>
