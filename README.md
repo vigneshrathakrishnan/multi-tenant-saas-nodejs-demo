@@ -105,7 +105,7 @@ Includes:
 
 ## 🎥 Demo Video
 
-(Add demo video link here)
+https://drive.google.com/file/d/1Uy8vcP3rVkgmFvWuBTCYFQ48GF6BRpiQ/view
 
 ---
 
